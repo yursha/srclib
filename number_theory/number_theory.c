@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <stdbool.h>
 
 // UINT64_MAX = 1.844674e+19
 // 21! = 5.1090942e+19 > UINT64_MAx
@@ -54,6 +55,10 @@ struct vector prime_factorization(uint64_t a) {
     v.data[v.n++].power = 1;
   }
   return v;
+}
+
+bool is_prime(uint64_t n) {
+  return prime_factorization(n).n > 0;
 }
 
 // Does a prime factorization of an integer.
