@@ -5,7 +5,7 @@
 
 struct vector prime_factorization(uint64_t a) {
   struct vector v;
-  v.n = 0;
+  v.size = 0;
   v.data = (struct factor*) malloc(sizeof(struct factor) * MAX_DISTINCT_FACTORS);
 
   // sqrt(UINT64_MAX) is not representable by uint32_t.
@@ -25,16 +25,16 @@ struct vector prime_factorization(uint64_t a) {
       a /= i;
     }
     if (f.power > 0) {
-      v.data[v.n++] = f;
+      v.data[v.size++] = f;
     }
   }
-  if (v.n && a != 1) {
-    v.data[v.n].factor = a;
-    v.data[v.n++].power = 1;
+  if (v.size && a != 1) {
+    v.data[v.size].factor = a;
+    v.data[v.size++].power = 1;
   }
   return v;
 }
 
 bool is_prime(uint64_t n) {
-  return prime_factorization(n).n > 0;
+  return prime_factorization(n).size > 0;
 }

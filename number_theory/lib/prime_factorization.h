@@ -17,8 +17,8 @@ struct factor {
 };
 
 struct vector {
-  // The maximum value `n` can achieve is MAX_DISTINCT_FACTORS
-  uint8_t n;
+  // The maximum value `size` can achieve is MAX_DISTINCT_FACTORS
+  uint8_t size;
   struct factor* data;
 };
 

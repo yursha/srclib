@@ -15,10 +15,10 @@ int main(int argc, char * args[]) {
   uint64_t number = strtoull(args[1], NULL, 10);
 
   struct vector v = prime_factorization(number);
-  if (v.n == 0) {
+  if (v.size == 0) {
     printf("prime\n");
   } else {
-    for (int i = 0; i < v.n; i++) {
+    for (int i = 0; i < v.size; i++) {
       printf("%llu^%i ", v.data[i].factor, v.data[i].power);
     }
     printf("\n");
