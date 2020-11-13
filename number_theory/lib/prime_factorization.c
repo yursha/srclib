@@ -1,4 +1,4 @@
-#include <math.h> // sqrt
+#include <math.h>   // sqrt
 #include <stdlib.h> // malloc
 
 #include "prime_factorization.h"

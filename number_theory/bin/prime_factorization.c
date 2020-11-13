@@ -1,4 +1,4 @@
-#include <stdio.h> // printf
+#include <stdio.h>  // printf
 #include <stdlib.h> // free, strtoull
 
 #include "../lib/prime_factorization.h"

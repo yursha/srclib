@@ -1,5 +1,5 @@
 #include <stdbool.h> // bool
-#include <stdint.h> // uint*_t
+#include <stdint.h>  // uint*_t
 
 // UINT64_MAX = 1.844674e+19
 // 21! = 5.1090942e+19 > UINT64_MAx
