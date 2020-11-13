@@ -3,7 +3,7 @@
 
 #include "../lib/prime_factorization.h"
 
-// Does a prime factorization of an integer.
+// Performs prime factorization of an integer.
 // The program takes ~30s to factorize the largest UINT64_T integer.
 int main(int argc, char * args[]) {
 
