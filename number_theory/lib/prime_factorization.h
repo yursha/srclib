@@ -22,5 +22,6 @@ struct vector {
   struct factor* data;
 };
 
-struct vector prime_factorization(uint64_t a);
+// Caller must free `vector.data`.
+struct vector prime_factorization(uint64_t n);
 bool is_prime(uint64_t n);

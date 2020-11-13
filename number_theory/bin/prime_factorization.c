@@ -14,14 +14,14 @@ int main(int argc, char * args[]) {
 
   uint64_t number = strtoull(args[1], NULL, 10);
 
-  struct vector v = prime_factorization(number);
-  if (v.size == 0) {
+  struct vector factors = prime_factorization(number);
+  if (factors.size == 0) {
     printf("prime\n");
   } else {
-    for (int i = 0; i < v.size; i++) {
-      printf("%llu^%i ", v.data[i].factor, v.data[i].power);
+    for (int i = 0; i < factors.size; i++) {
+      printf("%llu^%i ", factors.data[i].factor, factors.data[i].power);
     }
     printf("\n");
   }
-  free(v.data);
+  free(factors.data);
 }
